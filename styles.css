@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,200;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+html{
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+header .nav-iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #394076;
+    padding: .5rem;
+    color: white;
+    font-size: .6rem;
+    padding: .7rem 5rem; /*padding body*/
+}
+header .iconos-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header .iconos-page a{
+    text-decoration: none;
+    color: #ffffff;
+}
+header .iconos-page i{
+    padding: 0px 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+header .iconos-page i h2{
+    padding: 0px 1rem;
+}
+header .nav-iconos .iconos-redes i{
+    padding: 0px .5rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #f2f2f2;
+}
+nav{
+
+    padding: 1.5rem 5rem;
+    position: relative;
+}
+/*============icono=============*/
+#menu-icon{
+    font-size: 2rem;
+    color:black;
+    display: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    padding: 0px .5rem;
+    font-weight: 1000;
+    text-transform: capitalize;
+}
+nav a:hover{
+    border-bottom: 4px solid #f5d13d;
+}
+nav i{
+    font-size: .7rem;
+    color: black;
+    
+}
+/*          inicio banner           */
+.banner{
+    position: relative;
+    transition: all .1s ease-in-out;
+    width: 100%;
+    min-height: 90vh;
+    background-image: url('banner-consultoria.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: banner 20s infinite linear;
+}
+/*silder banner*/
+@keyframes banner{
+    0%{
+        background-image: url('banner-imagen-1.png');
+    }
+    25%{
+        background-image: url('banner-imagen-1.png');
+    }
+    26%{
+        background-image: url('banner-imagen-2.png');
+    }
+    50%{
+        background-image: url('banner-imagen-2.png');
+    }
+    51%{
+        background-image: url('banner-imagen-3.png');
+    }
+    75%{
+        background-image: url('banner-imagen-3.png');
+    }
+    76%{
+        background-image: url('banner-imagen-4.png');
+    }
+    100%{
+        background-image: url('banner-imagen-4.png');
+    }
+}
+.banner::before{
+    content: '';
+    background: #3940768e;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.banner .container-banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.banner .container-banner h2{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.banner .container-banner p{
+    text-align: center;
+    padding: .5rem 0px;
+    font-size: 1rem;
+}
+.banner .container-banner .botones{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.banner .container-banner a{
+    color: white;
+    font-size: .8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+.container-banner .boton-transparente{
+    border: 2px solid white;
+    padding: 10px 15px;
+    box-shadow: 0px  1px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    transition: .5s;
+}
+.container-banner .boton-transparente:hover{
+    border: 2px solid #f5d13d;
+    background: #f5d13d;
+    color: #394076;
+}
+
+.container-banner .boton-amarillo{
+    font-weight: 700;
+    border: 2px solid #f5d13d;
+    background: #f5d13d;
+    padding: 10px 15px;
+    box-shadow: 0px  1px 10px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+.container-banner .boton-amarillo:hover{
+    border: 2px solid white;
+    padding: 10px 15px;
+    background:rgba(255, 255, 255, 0);
+    
+}
+
+/*              FEACTURES           */
+.features{
+    background: #f2f2f2;
+    padding: 4.5rem 7rem;
+}
+.features .info{
+    text-align: center;
+    padding-bottom: 5rem;
+}
+.features .info h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.1rem;
+}
+.features .info p{
+    text-align: center;
+}
+.container-features {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+.container-features .tarjetas-box{
+    text-align: center;
+}
+.container-features .tarjetas-box i{
+    font-size: 2rem;
+    background: #394076;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.container-features .tarjetas-box h2{
+    font-size: 1.2rem;
+    padding-top: 20px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.container-features .tarjetas-box p{
+    padding: 10px 40px;
+}
+
+
+/*          contacto            */
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #394076;
+}
+.contacto .img-contacto{
+    width: 50%;
+    height: 100%;
+}
+.contacto .img-contacto img{
+    width: 100%;
+    height: 100%;
+}
+
+/**/
+form{
+    width: 50%;
+    padding-left: 30px;
+}
+/**/
+
+form .contenedor-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 65%;
+    min-height: 100%;
+}
+/**/
+form .container-form{
+    width: 100%;
+}
+form .contenedor-form h2{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+form .contenedor-form p{
+    color: white;
+    width: 70%;
+    padding-bottom: 15px;
+}
+/*================   =================*/
+form .contenedor-form .datos-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+.container-form .datos-form input{
+    margin-top: 10px;
+    height: 35px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+}
+/*       quitar flechas en input number      */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.container-form .mensaje textarea{
+    margin:10px 0px;
+    width: 100%;
+    height: 90px;
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+}
+.container-form .boton-formulario{
+    text-align: center;
+}
+.container-form .boton-formulario .form_submit{
+    background: #f5d13d;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    padding: 8px 11px;
+    box-shadow: 0px  1px 10px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+.container-form .boton-formulario .form_submit:hover{
+    color: #394076;
+    background: #ffffff;
+}
+
+/*    */
+@media (max-width: 1075px){
+    .contacto form{
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 922px){
+    .features .container-features{
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 0px;
+    }
+    form{
+        width: 50%;
+        padding: 10px 10px ;
+    }
+    form .contenedor-form{
+        width: 100%;
+        min-height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width: 614px){
+    header .nav-iconos,
+    header .header-nav{
+        padding: 1.5rem 3rem;
+    }
+    .banner .container-banner p{
+        padding: 0px 1.7rem;
+    }
+    .contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contacto .img-contacto{
+        width: 100%;
+        height: 15rem;
+    }
+    form{
+        width: 100%;
+        padding: 2rem;
+    }
+    
+}
+/*                          */
+@media (max-width:645px){
+    header .nav-iconos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+    }
+    header .nav-iconos .iconos-redes{
+        margin-top: .5rem;
+    }
+}
+/*===============*/
+@media (max-width: 704px){
+    .features{
+        padding: 4.5rem 2rem;
+    }
+}
+
+/*                          */
+@media (max-width: 614px){
+    header .header-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+    }
+    header .header-nav .logo a{
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+    .features .container-features{
+        padding: 1rem 2rem;
+    }
+    form .contenedor-form {
+        text-align: center;
+    }
+    form .contenedor-form p{
+        width: 90%;
+    }
+}
+
+/*                              */
+@media  (max-width: 542px){
+    .banner .container-banner h2{
+        font-size: 3.3rem;
+    }
+
+    .features .container-features {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 0px;
+    }
+    
+    header .header-nav .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: center;
+        width: 100%;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 700vh;
+        padding: .5rem 3%;
+        background: #f2f2f2;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.7rem;
+        margin: 2rem 0;
+    }
+
+}
+
+/*=====================================*/
+@media (max-width: 430px){
+    header .nav-iconos{
+        padding: .7rem .5rem; /*padding body*/
+    }
+    .banner .container-banner h2{
+        font-size: 3rem;
+    }
+    form{
+        width: 100%;
+        padding: 2rem;
+    }
+    form .contenedor-form .datos-form{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    form .contenedor-form .mensaje textarea{
+        margin-top: 20px;
+    }
+
+}
+
+
